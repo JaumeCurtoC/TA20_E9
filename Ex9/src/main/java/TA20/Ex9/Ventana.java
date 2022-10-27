@@ -24,90 +24,121 @@ public class Ventana extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(4, 4, 0, 0));
-		
+
 		JToggleButton tglbtn = new JToggleButton("");
 		tglbtn.setBackground(new Color(0, 0, 0));
 		tglbtn.setSelected(true);
 		contentPane.add(tglbtn);
-		
+
 		JToggleButton tglbtn1 = new JToggleButton("");
 		tglbtn1.setBackground(new Color(0, 0, 0));
 		tglbtn1.setSelected(true);
 		contentPane.add(tglbtn1);
-		
+
 		JToggleButton tglbtn2 = new JToggleButton("");
 		tglbtn2.setBackground(new Color(0, 0, 0));
 		tglbtn2.setSelected(true);
 		contentPane.add(tglbtn2);
-		
+
 		JToggleButton tglbtn3 = new JToggleButton("");
 		tglbtn3.setBackground(new Color(0, 0, 0));
 		tglbtn3.setSelected(true);
 		contentPane.add(tglbtn3);
-		
+
 		JToggleButton tglbtn4 = new JToggleButton("");
 		tglbtn4.setSelected(true);
 		tglbtn4.setBackground(new Color(0, 0, 0));
 		contentPane.add(tglbtn4);
-		
+
 		JToggleButton tglbtn5 = new JToggleButton("");
 		tglbtn5.setBackground(new Color(0, 0, 0));
 		tglbtn5.setSelected(true);
 		contentPane.add(tglbtn5);
-		
+
 		JToggleButton tglbtn6 = new JToggleButton("");
 		tglbtn6.setBackground(new Color(0, 0, 0));
 		tglbtn6.setSelected(true);
 		contentPane.add(tglbtn6);
-		
+
 		JToggleButton tglbtn7 = new JToggleButton("");
 		tglbtn7.setBackground(new Color(0, 0, 0));
 		tglbtn7.setSelected(true);
 		contentPane.add(tglbtn7);
-		
+
 		JToggleButton tglbtn8 = new JToggleButton("");
 		tglbtn8.setBackground(new Color(0, 0, 0));
 		tglbtn8.setSelected(true);
 		contentPane.add(tglbtn8);
-		
+
 		JToggleButton tglbtn9 = new JToggleButton("");
 		tglbtn9.setBackground(new Color(0, 0, 0));
 		tglbtn9.setSelected(true);
 		contentPane.add(tglbtn9);
-		
+
 		JToggleButton tglbtn10 = new JToggleButton("");
 		tglbtn10.setBackground(new Color(0, 0, 0));
 		tglbtn10.setSelected(true);
 		contentPane.add(tglbtn10);
-		
+
 		JToggleButton tglbtn11 = new JToggleButton("");
 		tglbtn11.setBackground(new Color(0, 0, 0));
 		tglbtn11.setSelected(true);
 		contentPane.add(tglbtn11);
-		
+
 		JToggleButton tglbtn12 = new JToggleButton("");
 		tglbtn12.setBackground(new Color(0, 0, 0));
 		tglbtn12.setSelected(true);
 		contentPane.add(tglbtn12);
-		
+
 		JToggleButton tglbtn13 = new JToggleButton("");
 		tglbtn13.setBackground(new Color(0, 0, 0));
 		tglbtn13.setSelected(true);
 		contentPane.add(tglbtn13);
-		
+
 		JToggleButton tglbtn14 = new JToggleButton("");
 		tglbtn14.setBackground(new Color(0, 0, 0));
 		tglbtn14.setSelected(true);
 		contentPane.add(tglbtn14);
-		
+
 		JToggleButton tglbtn15 = new JToggleButton("");
 		tglbtn15.setBackground(new Color(0, 0, 0));
 		tglbtn15.setSelected(true);
 		contentPane.add(tglbtn15);
-		
-		
+
 		setVisible(true);
+		
+		JToggleButton[] arrayTB = {
+				tglbtn,
+				tglbtn1,
+				tglbtn2,
+				tglbtn3,
+				tglbtn4,
+				tglbtn5,
+				tglbtn6,
+				tglbtn7,
+				tglbtn8,
+				tglbtn9,
+				tglbtn10,
+				tglbtn11,
+				tglbtn12,
+				tglbtn13,
+				tglbtn14,
+				tglbtn15
+		};
+		
+		randomColor(arrayTB);
 	}
 
-	
+	private void randomColor(JToggleButton[] arraytglbtn) {
+
+		for (int i = 0; i < arraytglbtn.length; i++) {
+			if (arraytglbtn[i].getBackground().getRed() == 0 && arraytglbtn[i].getBackground().getGreen() == 0 && arraytglbtn[i].getBackground().getBlue() == 0) {
+				System.out.println(i);
+			}
+		}
+		
+		
+
+	}
+
 }
