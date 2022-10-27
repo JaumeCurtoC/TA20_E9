@@ -5,10 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.layout.FormSpecs;
+import java.awt.GridLayout;
 import javax.swing.JToggleButton;
 
 public class Ventana extends JFrame {
@@ -36,78 +33,60 @@ public class Ventana extends JFrame {
 	 */
 	public Ventana() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 533, 300);
+		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
-		contentPane.setLayout(new FormLayout(new ColumnSpec[] {
-				FormSpecs.RELATED_GAP_COLSPEC,
-				FormSpecs.DEFAULT_COLSPEC,
-				FormSpecs.RELATED_GAP_COLSPEC,
-				FormSpecs.DEFAULT_COLSPEC,
-				FormSpecs.RELATED_GAP_COLSPEC,
-				FormSpecs.DEFAULT_COLSPEC,
-				FormSpecs.RELATED_GAP_COLSPEC,
-				FormSpecs.DEFAULT_COLSPEC,},
-			new RowSpec[] {
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				FormSpecs.DEFAULT_ROWSPEC,
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				FormSpecs.DEFAULT_ROWSPEC,
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				FormSpecs.DEFAULT_ROWSPEC,
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				FormSpecs.DEFAULT_ROWSPEC,}));
+		contentPane.setLayout(new GridLayout(4, 4, -3, -3));
 		
-		JToggleButton tglbtn = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn, "2, 2");
+		JToggleButton tglbtnNewToggleButton = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton);
 		
-		JToggleButton tglbtn1 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn1, "4, 2");
+		JToggleButton tglbtnNewToggleButton_2 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_2);
 		
-		JToggleButton tglbtn2 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn2, "6, 2");
+		JToggleButton tglbtnNewToggleButton_3 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_3);
 		
-		JToggleButton tglbtn3 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn3, "8, 2");
+		JToggleButton tglbtnNewToggleButton_4 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_4);
 		
-		JToggleButton tglbtn4 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn4, "2, 4");
+		JToggleButton tglbtnNewToggleButton_1 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_1);
 		
-		JToggleButton tglbtn5 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn5, "4, 4");
+		JToggleButton tglbtnNewToggleButton_8 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_8);
 		
-		JToggleButton tglbtn6 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn6, "6, 4");
+		JToggleButton tglbtnNewToggleButton_6 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_6);
 		
-		JToggleButton tglbtn7 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn7, "8, 4");
+		JToggleButton tglbtnNewToggleButton_5 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_5);
 		
-		JToggleButton tglbtn8 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn8, "2, 6");
+		JToggleButton tglbtnNewToggleButton_9 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_9);
 		
-		JToggleButton tglbtn9 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn9, "4, 6");
+		JToggleButton tglbtnNewToggleButton_7 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_7);
 		
-		JToggleButton tglbtn10 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn10, "6, 6");
+		JToggleButton tglbtnNewToggleButton_9_1 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_9_1);
 		
-		JToggleButton tglbtn11 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn11, "8, 6");
+		JToggleButton tglbtnNewToggleButton_9_3 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_9_3);
 		
-		JToggleButton tglbtn12 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn12, "2, 8");
+		JToggleButton tglbtnNewToggleButton_9_2 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_9_2);
 		
-		JToggleButton tglbtn13 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn13, "4, 8");
+		JToggleButton tglbtnNewToggleButton_9_4 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_9_4);
 		
-		JToggleButton tglbtn14 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn14, "6, 8");
+		JToggleButton tglbtnNewToggleButton_9_7 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_9_7);
 		
-		JToggleButton tglbtn15 = new JToggleButton("New toggle button");
-		contentPane.add(tglbtn15, "8, 8");
-	
+		JToggleButton tglbtnNewToggleButton_9_5 = new JToggleButton("New toggle button");
+		contentPane.add(tglbtnNewToggleButton_9_5);
 	}
 
 }
