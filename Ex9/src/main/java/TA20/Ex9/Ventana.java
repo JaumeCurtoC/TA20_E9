@@ -7,6 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
+
 import javax.swing.JToggleButton;
 
 public class Ventana extends JFrame {
@@ -130,15 +134,24 @@ public class Ventana extends JFrame {
 	}
 
 	private void randomColor(JToggleButton[] arraytglbtn) {
-
+		ArrayList<Color> colores = new ArrayList<>(Arrays.asList(
+                Color.RED,Color.RED, Color.BLUE,Color.BLUE, Color.GREEN,Color.GREEN, Color.ORANGE,Color.ORANGE,
+                Color.YELLOW,Color.YELLOW, Color.CYAN,Color.CYAN,  Color.MAGENTA,Color.MAGENTA, Color.PINK, Color.PINK));
+		
 		for (int i = 0; i < arraytglbtn.length; i++) {
 			if (arraytglbtn[i].getBackground().getRed() == 0 && arraytglbtn[i].getBackground().getGreen() == 0 && arraytglbtn[i].getBackground().getBlue() == 0) {
-				System.out.println(i);
+
+				int r = getRandomNumber(i);
+				arraytglbtn[i].setBackground(colores.get(r));
+				colores.remove(r);
 			}
 		}
-		
-		
-
 	}
+	
+	public int getRandomNumber(int i) {
+        Random ran = new Random();
+        int randomNumber=ran.nextInt(16-i);
+        return randomNumber;
+    }
 
 }
