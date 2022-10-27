@@ -1,5 +1,6 @@
 package TA20.Ex9;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,22 +14,6 @@ public class Ventana extends JFrame {
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Ventana frame = new Ventana();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
 	public Ventana() {
@@ -40,73 +25,89 @@ public class Ventana extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(4, 4, 0, 0));
 		
-		JToggleButton tglbtnNewToggleButton_5 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_5.setBackground(new Color(0, 255, 255));
-		tglbtnNewToggleButton_5.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_5);
+		JToggleButton tglbtn = new JToggleButton("");
+		tglbtn.setBackground(new Color(0, 0, 0));
+		tglbtn.setSelected(true);
+		contentPane.add(tglbtn);
 		
-		JToggleButton tglbtnNewToggleButton_1 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_1.setBackground(new Color(0, 255, 255));
-		tglbtnNewToggleButton_1.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_1);
+		JToggleButton tglbtn1 = new JToggleButton("");
+		tglbtn1.setBackground(new Color(0, 0, 0));
+		tglbtn1.setSelected(true);
+		contentPane.add(tglbtn1);
 		
-		JToggleButton tglbtnNewToggleButton_6 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_6.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_6);
+		JToggleButton tglbtn2 = new JToggleButton("");
+		tglbtn2.setBackground(new Color(0, 0, 0));
+		tglbtn2.setSelected(true);
+		contentPane.add(tglbtn2);
 		
-		JToggleButton tglbtnNewToggleButton_4 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_4.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_4);
+		JToggleButton tglbtn3 = new JToggleButton("");
+		tglbtn3.setBackground(new Color(0, 0, 0));
+		tglbtn3.setSelected(true);
+		contentPane.add(tglbtn3);
 		
-		JToggleButton tglbtnNewToggleButton_3 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_3.setSelected(true);
-		tglbtnNewToggleButton_3.setForeground(new Color(0, 0, 0));
-		tglbtnNewToggleButton_3.setBackground(new Color(255, 255, 255));
-		contentPane.add(tglbtnNewToggleButton_3);
+		JToggleButton tglbtn4 = new JToggleButton("");
+		tglbtn4.setSelected(true);
+		tglbtn4.setBackground(new Color(0, 0, 0));
+		contentPane.add(tglbtn4);
 		
-		JToggleButton tglbtnNewToggleButton_2 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_2.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_2);
+		JToggleButton tglbtn5 = new JToggleButton("");
+		tglbtn5.setBackground(new Color(0, 0, 0));
+		tglbtn5.setSelected(true);
+		contentPane.add(tglbtn5);
 		
-		JToggleButton tglbtnNewToggleButton_8 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_8.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_8);
+		JToggleButton tglbtn6 = new JToggleButton("");
+		tglbtn6.setBackground(new Color(0, 0, 0));
+		tglbtn6.setSelected(true);
+		contentPane.add(tglbtn6);
 		
-		JToggleButton tglbtnNewToggleButton_7 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_7.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_7);
+		JToggleButton tglbtn7 = new JToggleButton("");
+		tglbtn7.setBackground(new Color(0, 0, 0));
+		tglbtn7.setSelected(true);
+		contentPane.add(tglbtn7);
 		
-		JToggleButton tglbtnNewToggleButton = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton);
+		JToggleButton tglbtn8 = new JToggleButton("");
+		tglbtn8.setBackground(new Color(0, 0, 0));
+		tglbtn8.setSelected(true);
+		contentPane.add(tglbtn8);
 		
-		JToggleButton tglbtnNewToggleButton_9 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_9.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_9);
+		JToggleButton tglbtn9 = new JToggleButton("");
+		tglbtn9.setBackground(new Color(0, 0, 0));
+		tglbtn9.setSelected(true);
+		contentPane.add(tglbtn9);
 		
-		JToggleButton tglbtnNewToggleButton_10 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_10.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_10);
+		JToggleButton tglbtn10 = new JToggleButton("");
+		tglbtn10.setBackground(new Color(0, 0, 0));
+		tglbtn10.setSelected(true);
+		contentPane.add(tglbtn10);
 		
-		JToggleButton tglbtnNewToggleButton_11 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_11.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_11);
+		JToggleButton tglbtn11 = new JToggleButton("");
+		tglbtn11.setBackground(new Color(0, 0, 0));
+		tglbtn11.setSelected(true);
+		contentPane.add(tglbtn11);
 		
-		JToggleButton tglbtnNewToggleButton_12 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_12.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_12);
+		JToggleButton tglbtn12 = new JToggleButton("");
+		tglbtn12.setBackground(new Color(0, 0, 0));
+		tglbtn12.setSelected(true);
+		contentPane.add(tglbtn12);
 		
-		JToggleButton tglbtnNewToggleButton_13 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_13.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_13);
+		JToggleButton tglbtn13 = new JToggleButton("");
+		tglbtn13.setBackground(new Color(0, 0, 0));
+		tglbtn13.setSelected(true);
+		contentPane.add(tglbtn13);
 		
-		JToggleButton tglbtnNewToggleButton_14 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_14.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_14);
+		JToggleButton tglbtn14 = new JToggleButton("");
+		tglbtn14.setBackground(new Color(0, 0, 0));
+		tglbtn14.setSelected(true);
+		contentPane.add(tglbtn14);
 		
-		JToggleButton tglbtnNewToggleButton_15 = new JToggleButton("New toggle button");
-		tglbtnNewToggleButton_15.setSelected(true);
-		contentPane.add(tglbtnNewToggleButton_15);
+		JToggleButton tglbtn15 = new JToggleButton("");
+		tglbtn15.setBackground(new Color(0, 0, 0));
+		tglbtn15.setSelected(true);
+		contentPane.add(tglbtn15);
+		
+		
+		setVisible(true);
 	}
 
+	
 }
