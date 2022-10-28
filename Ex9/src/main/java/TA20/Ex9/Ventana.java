@@ -19,6 +19,8 @@ public class Ventana extends JFrame {
 	private int contador=0;
 	private JToggleButton[] arrayTB = new JToggleButton[16];
 	private JToggleButton[] comparadorBotones = new JToggleButton[2];
+	private JToggleButton boton1 = new JToggleButton();
+
 	/**
 	 * Launch the application.
 	 */
@@ -52,9 +54,11 @@ public class Ventana extends JFrame {
 			arrayTB[i].setBackground(new Color(0, 0, 0));
 			arrayTB[i].setSelected(true);
 			contentPane.add(arrayTB[i]);
+			boton1=arrayTB[i];
 			arrayTB[i].addActionListener(new ActionListener() {
     			public void actionPerformed(ActionEvent e) {
-    				//compare();
+    				compare((JToggleButton)e.getSource());
+    				//System.out.print(e.getSource().getClass());
     			}
     		});
 		}
@@ -89,9 +93,11 @@ public class Ventana extends JFrame {
 
     private void noAcerto() {
         for(int i=0;i<comparadorBotones.length; i++) {
+        	System.out.print(comparadorBotones[i]);
             comparadorBotones[i].setSelected(true);
         }
     }
+    
 	private void randomColor() {
 		ArrayList<Color> colores = new ArrayList<>(Arrays.asList(
                 Color.RED,Color.RED, Color.BLUE,Color.BLUE, Color.GREEN,Color.GREEN, Color.ORANGE,Color.ORANGE,
