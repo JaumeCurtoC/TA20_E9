@@ -22,6 +22,8 @@ public class Ventana extends JFrame {
 	private JToggleButton[] arrayTB = new JToggleButton[16];
 	private JToggleButton[] comparadorBotones = new JToggleButton[2];
 	private JToggleButton boton;
+	private JToggleButton boton1 = new JToggleButton();
+
 
 	public Ventana() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,20 +39,19 @@ public class Ventana extends JFrame {
 			arrayTB[i].setBackground(new Color(0, 0, 0));
 			arrayTB[i].setSelected(true);
 			contentPane.add(arrayTB[i]);
+			boton1=arrayTB[i];
 			arrayTB[i].addActionListener(new ActionListener() {
 				
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					compare((JToggleButton)e.getSource());
-					
-				}
-			});
+				
+    			public void actionPerformed(ActionEvent e) {
+    				compare((JToggleButton)e.getSource());
+    			}
+    		});
 		}
 
 		setVisible(true);
 		
 		randomColor();
-		//botonSeleccionado();
 		
 	}
 	
@@ -59,12 +60,8 @@ public class Ventana extends JFrame {
 	private void compare(JToggleButton boton) {
         if(contador==0) {
             comparadorBotones[contador] = boton;
-            System.out.println(contador);
             contador++;
         } else {
-        	System.out.println("entro aque");
-        	System.out.println(comparadorBotones[contador-1].getBackground());
-        	System.out.println(boton.getBackground());
             if(comparadorBotones[0].getBackground() == boton.getBackground()) {
                 comparadorBotones[contador] = boton;
                 contador=0;
@@ -90,6 +87,7 @@ public class Ventana extends JFrame {
             comparadorBotones[i].setSelected(true);
         }
     }
+    
 	private void randomColor() {
 		ArrayList<Color> colores = new ArrayList<>(Arrays.asList(
                 Color.RED,Color.RED, Color.BLUE,Color.BLUE, Color.GREEN,Color.GREEN, Color.ORANGE,Color.ORANGE,
