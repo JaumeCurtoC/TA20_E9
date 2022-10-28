@@ -60,12 +60,11 @@ public class Ventana extends JFrame {
 		
 	}
 	
-	
-	
 	private void compare(JToggleButton boton) {
         if(contador==0) {
             comparadorBotones[contador] = boton;
             contador++;
+            boton.setEnabled(false);
         } else {
             if(comparadorBotones[0].getBackground() == boton.getBackground()) {
                 comparadorBotones[contador] = boton;
@@ -75,6 +74,9 @@ public class Ventana extends JFrame {
                 
                 Arrays.fill(comparadorBotones, null);
             } else {
+            	for (int i = 0; i < arrayTB.length; i++) {
+            		arrayTB[i].setEnabled(false);
+            	}
             	comparadorBotones[contador] = boton;
                 contador=0;
                 new Timer().schedule(new TimerTask() {
@@ -82,9 +84,11 @@ public class Ventana extends JFrame {
                     public void run() {
                     	noAcerto();
                     	Arrays.fill(comparadorBotones, null);
+                    	for (int i = 0; i < arrayTB.length; i++) {
+                    		arrayTB[i].setEnabled(true);
+                    	}
                     }
                 }, 350);
-                
                 
             }
             intentos++;
