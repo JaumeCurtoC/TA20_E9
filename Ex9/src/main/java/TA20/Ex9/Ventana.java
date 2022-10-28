@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
@@ -12,6 +13,8 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.swing.JToggleButton;
 
@@ -20,12 +23,15 @@ public class Ventana extends JFrame {
 	private JPanel contentPane;
 	private int contador=0;
 	private JToggleButton[] arrayTB = new JToggleButton[16];
-	private JToggleButton[] comparadorBotones = new JToggleButton[2];
-	private JToggleButton boton;
-	private JToggleButton boton1 = new JToggleButton();
+	private JToggleButton[] comparadorBotones;
+	private int intentos;
+	private int aciertos;
 
 
 	public Ventana() {
+		comparadorBotones = new JToggleButton[2];
+		intentos = 0;
+		aciertos = 0;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 552, 391);
 		contentPane = new JPanel();
@@ -39,7 +45,6 @@ public class Ventana extends JFrame {
 			arrayTB[i].setBackground(new Color(0, 0, 0));
 			arrayTB[i].setSelected(true);
 			contentPane.add(arrayTB[i]);
-			boton1=arrayTB[i];
 			arrayTB[i].addActionListener(new ActionListener() {
 				
 				
@@ -66,15 +71,32 @@ public class Ventana extends JFrame {
                 comparadorBotones[contador] = boton;
                 contador=0;
                 acerto();
+                aciertos++;
+                
                 Arrays.fill(comparadorBotones, null);
             } else {
             	comparadorBotones[contador] = boton;
                 contador=0;
-                noAcerto();
-                Arrays.fill(comparadorBotones, null);
+                new Timer().schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                    	noAcerto();
+                    	Arrays.fill(comparadorBotones, null);
+                    }
+                }, 350);
+                
+                
+            }
+            intentos++;
+            if(aciertos==8) {
+            	endGame();
             }
         }
     }
+	
+	private void endGame() {
+		JOptionPane.showMessageDialog(contentPane, "Felicitaciones! Has ganado!\nTan solo te costó " + intentos + " intentos");
+	}
 
     private void acerto() {
         for(int i = 0; i<comparadorBotones.length; i++) {
