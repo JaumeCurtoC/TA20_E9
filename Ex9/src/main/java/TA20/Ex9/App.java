@@ -1,13 +1,9 @@
 package TA20.Ex9;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	Ventana frame = new Ventana();
     }
 }
