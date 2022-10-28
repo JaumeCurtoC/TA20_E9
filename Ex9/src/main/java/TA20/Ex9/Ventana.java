@@ -15,6 +15,8 @@ import javax.swing.JToggleButton;
 
 public class Ventana extends JFrame {
 
+	private JToggleButton[] arrayTB = new JToggleButton[16];
+	
 	private JPanel contentPane;
 
 	/**
@@ -29,7 +31,7 @@ public class Ventana extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new GridLayout(4, 4, 0, 0));
 
-		JToggleButton tglbtn = new JToggleButton("");
+		/*JToggleButton tglbtn = new JToggleButton("");
 		tglbtn.setBackground(new Color(0, 0, 0));
 		tglbtn.setSelected(true);
 		contentPane.add(tglbtn);
@@ -107,42 +109,30 @@ public class Ventana extends JFrame {
 		JToggleButton tglbtn15 = new JToggleButton("");
 		tglbtn15.setBackground(new Color(0, 0, 0));
 		tglbtn15.setSelected(true);
-		contentPane.add(tglbtn15);
+		contentPane.add(tglbtn15); */
 
+		for (int i = 0; i < arrayTB.length; i++) {
+			arrayTB[i] = new JToggleButton("");
+			arrayTB[i].setBackground(new Color(0, 0, 0));
+			arrayTB[i].setSelected(true);
+			contentPane.add(arrayTB[i]);
+		}
+		
 		setVisible(true);
 		
-		JToggleButton[] arrayTB = {
-				tglbtn,
-				tglbtn1,
-				tglbtn2,
-				tglbtn3,
-				tglbtn4,
-				tglbtn5,
-				tglbtn6,
-				tglbtn7,
-				tglbtn8,
-				tglbtn9,
-				tglbtn10,
-				tglbtn11,
-				tglbtn12,
-				tglbtn13,
-				tglbtn14,
-				tglbtn15
-		};
-		
-		randomColor(arrayTB);
+		randomColor();
 	}
 
-	private void randomColor(JToggleButton[] arraytglbtn) {
+	private void randomColor() {
 		ArrayList<Color> colores = new ArrayList<>(Arrays.asList(
                 Color.RED,Color.RED, Color.BLUE,Color.BLUE, Color.GREEN,Color.GREEN, Color.ORANGE,Color.ORANGE,
                 Color.YELLOW,Color.YELLOW, Color.CYAN,Color.CYAN,  Color.MAGENTA,Color.MAGENTA, Color.PINK, Color.PINK));
 		
-		for (int i = 0; i < arraytglbtn.length; i++) {
-			if (arraytglbtn[i].getBackground().getRed() == 0 && arraytglbtn[i].getBackground().getGreen() == 0 && arraytglbtn[i].getBackground().getBlue() == 0) {
+		for (int i = 0; i < arrayTB.length; i++) {
+			if (arrayTB[i].getBackground().getRed() == 0 && arrayTB[i].getBackground().getGreen() == 0 && arrayTB[i].getBackground().getBlue() == 0) {
 
 				int r = getRandomNumber(i);
-				arraytglbtn[i].setBackground(colores.get(r));
+				arrayTB[i].setBackground(colores.get(r));
 				colores.remove(r);
 			}
 		}
