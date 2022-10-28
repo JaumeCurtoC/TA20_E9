@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -19,25 +21,8 @@ public class Ventana extends JFrame {
 	private int contador=0;
 	private JToggleButton[] arrayTB = new JToggleButton[16];
 	private JToggleButton[] comparadorBotones = new JToggleButton[2];
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Ventana9 frame = new Ventana9();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private JToggleButton boton;
 
-	/**
-	 * Create the frame.
-	 */
 	public Ventana() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 552, 391);
@@ -53,10 +38,13 @@ public class Ventana extends JFrame {
 			arrayTB[i].setSelected(true);
 			contentPane.add(arrayTB[i]);
 			arrayTB[i].addActionListener(new ActionListener() {
-    			public void actionPerformed(ActionEvent e) {
-    				//compare();
-    			}
-    		});
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					compare((JToggleButton)e.getSource());
+					
+				}
+			});
 		}
 
 		setVisible(true);
@@ -65,18 +53,28 @@ public class Ventana extends JFrame {
 		//botonSeleccionado();
 		
 	}
+	
+	
+	
 	private void compare(JToggleButton boton) {
         if(contador==0) {
             comparadorBotones[contador] = boton;
+            System.out.println(contador);
             contador++;
-        } else if(contador==1){
-            if(comparadorBotones[contador-1].getBackground() == boton.getBackground()) {
+        } else {
+        	System.out.println("entro aque");
+        	System.out.println(comparadorBotones[contador-1].getBackground());
+        	System.out.println(boton.getBackground());
+            if(comparadorBotones[0].getBackground() == boton.getBackground()) {
                 comparadorBotones[contador] = boton;
                 contador=0;
                 acerto();
+                Arrays.fill(comparadorBotones, null);
             } else {
+            	comparadorBotones[contador] = boton;
                 contador=0;
                 noAcerto();
+                Arrays.fill(comparadorBotones, null);
             }
         }
     }
